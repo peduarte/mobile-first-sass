@@ -1,0 +1,22 @@
+body {
+	background: #1C1917;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 100px 0 0;
+	text-align: center;
+
+	&:before {
+		content: "This is the mobile version";
+	}
+
+	// This is where we include our media-query mixin
+	// We are passing desk as our argument
+	@include media-query(desk) {
+		background: #E5193C;
+
+		&:before {
+			content: "This is the desktop version";
+		}
+	}
+
+}

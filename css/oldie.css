@@ -1,0 +1,14 @@
+/* line 1, _global.scss */
+body {
+  background: #1C1917;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 100px 0 0;
+  text-align: center;
+  background: #E5193C; }
+  /* line 8, _global.scss */
+  body:before {
+    content: "This is the mobile version"; }
+  /* line 17, _global.scss */
+  body:before {
+    content: "This is the desktop version"; }

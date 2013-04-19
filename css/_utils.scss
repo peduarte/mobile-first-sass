@@ -1,0 +1,42 @@
+// Here we define that by default our users are not using an old browser
+// The use of !default allow us to override this variable before this point
+$old-ie: false !default;
+
+// Here we define some breakpoints - This can be whatever you want/need
+$desk-start: 960px !default;
+
+
+// This is where the magic happens
+// Our media-query mixin takes one argument, which is the media-query type
+@mixin media-query($media-query) {
+
+    // If $old-ie is false, carry on...
+    @if $old-ie == false {
+
+        // Here we check for the argument we passed when we included the media query
+        // If our argument is 'mobile', then go ahead and create our media query
+        // The media query can be anything you want.
+        @if $media-query == mobile {
+            @media only screen and (max-width: $desk-start) {
+                @content;
+            }
+        }
+
+        // If our argument is 'desk', then go ahead and create our media query for desktop
+        @if $media-query == desk {
+            @media only screen and (min-width: $desk-start) {
+                @content;
+            }
+
+        }
+    }
+
+    // Now, if $mq-ie ($mq-ie is defined in oldie.scss) is the same as what we passed
+    // Then go ahead and use that block of code.
+    // On all.scss we defined $mq-ie as equals to 'desk', so basically what this is doing is
+    // Checking for every include of the media-query mixin that uses 'desk' as the argument
+    // And using this code as default
+    @else if $mq-ie == $media-query {
+        @content;
+    }
+}
