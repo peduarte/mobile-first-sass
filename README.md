@@ -69,7 +69,7 @@ So here's my solution:
         	// If our argument is 'mobile', then go ahead and create our media query
         	// The media query can be anything you want.
             @if $media-query == mobile {
-                @media only screen and (max-width: $desk-start) { 
+                @media only screen and (max-width: $desk-start) {
                 	@content;
                 }
             }
@@ -88,11 +88,11 @@ So here's my solution:
         // On all.scss we defined $mq-ie as equals to 'desk', so basically what this is doing is
         // Checking for every include of the media-query mixin that uses 'desk' as the argument
         // And using this code as default
-        @else if $mq-ie == $media-query { 
+        @else if $mq-ie == $media-query {
         	@content;
         }
     }
-    
+
 ## _global.scss
 	body {
 		background: #1C1917;
@@ -100,21 +100,20 @@ So here's my solution:
 		font-size: 20px;
 		padding: 100px 0 0;
 		text-align: center;
-	
+
 		&:before {
 			content: "This is the mobile version";
 		}
-		
+
 		// This is where we include our media-query mixin
 		// We are passing desk as our argument
 		@include media-query(desk) {
 			background: #E5193C;
-	
+
 			&:before {
 				content: "This is the desktop version";
 			}
 		}
 	}
-	
-####I also created a [Demo page](www.pedroduarte.me/mobile-first-sass/) so you can see it in action.
-	
+
+####I also created a [Demo page](http://www.pedroduarte.me/mobile-first-sass/) so you can see it in action.
