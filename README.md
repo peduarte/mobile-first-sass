@@ -55,7 +55,6 @@ So here's my solution:
 	$old-ie: false !default;
 
 	// Here we define some breakpoints - This can be whatever you want/need
-    $lap-start: 481px !default;
     $desk-start: 960px !default;
 
 
@@ -116,4 +115,6 @@ So here's my solution:
 			}
 		}
 	}
+	
+####I also created a [Demo page](www.pedroduarte.me/mobile-first-sass/) so you can see it in action.
 	
