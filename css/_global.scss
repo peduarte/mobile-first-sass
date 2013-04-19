@@ -20,3 +20,16 @@ body {
 	}
 
 }
+
+p {
+	padding-top: 60px;
+}
+
+a {
+	color: #E5193C;
+	font-weight: bold;
+
+	@include media-query(desk) {
+		color: #1C1917;
+	}
+}

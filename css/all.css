@@ -15,3 +15,16 @@ body {
       /* line 17, _global.scss */
       body:before {
         content: "This is the desktop version"; } }
+
+/* line 24, _global.scss */
+p {
+  padding-top: 60px; }
+
+/* line 28, _global.scss */
+a {
+  color: #E5193C;
+  font-weight: bold; }
+  @media only screen and (min-width: 960px) {
+    /* line 28, _global.scss */
+    a {
+      color: #1C1917; } }
