@@ -20,9 +20,9 @@ So here's my solution:
 	index.html
 
 	all.scss
-	oldie.scss
-	_utils.scss
-	_global.scss
+	css/oldie.scss
+	cdd/_utils.scss
+	cd//_global.scss
 
 ## index.html:
 
