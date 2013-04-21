@@ -21,8 +21,8 @@ So here's my solution:
 
 	all.scss
 	css/oldie.scss
-	cdd/_utils.scss
-	cd//_global.scss
+	css/_utils.scss
+	css/_global.scss
 
 ## index.html:
 
