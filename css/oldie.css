@@ -1,24 +1,38 @@
 /* line 1, _global.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 3, _global.scss */
 body {
-  background: #1C1917;
+  background: #737E8C;
   color: #ffffff;
   font-size: 20px;
-  padding: 100px 0 0;
-  text-align: center;
-  background: #E5193C; }
-  /* line 8, _global.scss */
-  body:before {
-    content: "This is the mobile version"; }
-  /* line 17, _global.scss */
-  body:before {
-    content: "This is the desktop version"; }
+  line-height: 26px;
+  padding: 60px 0 0;
+  background: #8C7D73; }
 
-/* line 24, _global.scss */
-p {
-  padding-top: 60px; }
-
-/* line 28, _global.scss */
+/* line 18, _global.scss */
 a {
-  color: #E5193C;
-  font-weight: bold;
-  color: #1C1917; }
+  color: #333333;
+  font-weight: bold; }
+
+/* line 23, _global.scss */
+p {
+  display: block;
+  clear: both;
+  padding: 60px 15%;
+  text-align: center; }
+
+/* line 30, _global.scss */
+.code-sample {
+  margin: 3%;
+  float: left;
+  width: 47%;
+  margin: 0 1.5%; }
+
+/* line 40, _global.scss */
+pre {
+  background: #999999;
+  font-size: 16px;
+  padding: 0 0 0 20px; }

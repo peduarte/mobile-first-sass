@@ -81,6 +81,13 @@ So here's my solution:
                 }
 
             }
+            
+            // If our argument is 'print', we can also set a print media query. win!
+            @if $media-query == print {
+            	@media print {
+            		@content;
+            	}
+            }
         }
 
         // Now, if $mq-ie ($mq-ie is defined in oldie.scss) is the same as what we passed

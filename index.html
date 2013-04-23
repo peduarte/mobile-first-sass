@@ -13,6 +13,110 @@
 </head>
 <body>
 
-	<p>To see full documentation on how this works, check out the <a href="https://github.com/peduarte/mobile-first-sass">GitHub Page</a></p>
+	<p>On modern browsers this page will be 'responsive', on an old browser, such as, IE7 and IE8, it will fallback to the 'desk' media-query using a mobile-first sass technique.<br>
+		To see full documentation on how this works, check out the <a href="https://github.com/peduarte/mobile-first-sass">GitHub Page</a></p>
+
+	<div class="code-sample">
+		<h2>all.css</h2>
+		<pre>
+			<code>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #737E8C;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 60px 0 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background: #8C7D73;
+  }
+}
+
+a {
+  color: #333333;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  clear: both;
+  padding: 60px 15%;
+  text-align: center;
+}
+
+.code-sample {
+  margin: 3%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .code-sample {
+    float: left;
+    width: 47%;
+    margin: 0 1.5%;
+  }
+}
+
+pre {
+  background: #999999;
+  font-size: 16px;
+  padding: 0 0 0 20px;
+}
+			</code>
+		</pre>
+	</div>
+
+	<div class="code-sample">
+		<h2>oldie.css</h2>
+		<pre>
+			<code>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #737E8C;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 60px 0 0;
+  background: #8C7D73;
+}
+
+a {
+  color: #333333;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  clear: both;
+  padding: 60px 15%;
+  text-align: center;
+}
+
+.code-sample {
+  margin: 3%;
+  float: left;
+  width: 47%;
+  margin: 0 1.5%;
+}
+
+pre {
+  background: #999999;
+  font-size: 16px;
+  padding: 0 0 0 20px;
+}
+			</code>
+		</pre>
+	</div>
+
 </body>
 </html>
