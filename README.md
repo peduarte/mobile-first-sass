@@ -55,7 +55,7 @@ So here's my solution:
 	$old-ie: false !default;
 
 	// Here we define some breakpoints - This can be whatever you want/need
-    $desk-start: 960px !default;
+    $desk-start: 1000px !default;
 
 
     // This is where the magic happens
@@ -100,27 +100,50 @@ So here's my solution:
         }
     }
 
-## _global.scss
+## _global.scss (example)
+	* { margin: 0; padding: 0; }
+
 	body {
-		background: #1C1917;
+		background: #737E8C;
 		color: #ffffff;
 		font-size: 20px;
-		padding: 100px 0 0;
-		text-align: center;
-
-		&:before {
-			content: "This is the mobile version";
-		}
-
-		// This is where we include our media-query mixin
-		// We are passing desk as our argument
+		line-height: 26px;
+		padding: 60px 0 0;
+	
+		// This is an example of how to use the media-query mixin
+		// Styles in this declaration will only show on desktop
 		@include media-query(desk) {
-			background: #E5193C;
-
-			&:before {
-				content: "This is the desktop version";
-			}
+			background: #8C7D73;
 		}
+	
+	}
+	
+	a {
+		color: #333333;
+		font-weight: bold;
+	}
+	
+	p {
+		display: block;
+		clear: both;
+		padding: 60px 15%;
+		text-align: center;
+	}
+	
+	.code-sample {
+		margin: 3%;
+	
+		@include media-query(desk) {
+			float: left;
+			width: 47%;
+			margin: 0 1.5%;
+		}
+	}
+	
+	pre {
+		background: #999999;
+		font-size: 16px;
+		padding: 0 0 0 20px;
 	}
 
 ####I also created a [Demo page](http://www.pedroduarte.me/mobile-first-sass/) so you can see it in action.
